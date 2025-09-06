@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
+import {Script} from 'next'
 
 export const metadata = {
     title: {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <head>
                 <link rel="icon" href="/favicon.svg" sizes="any" />
+                <Script strategy="afterInteractive" src="/bannerscript.js" />
             </head>
             <body className="antialiased text-white bg-blue-900">
                 <div className="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
